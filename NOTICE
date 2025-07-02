@@ -1,0 +1,34 @@
+   ==============================================================================
+   Source Code Modifications
+   ==============================================================================
+   The modifications are based on the code in the /posix directory of glibc-2.30, which
+   is licensed under LGPL v2.1.
+   
+   The following modifications were implemented:
+   1、For performance optimization and memory usage restrictions, some memory allocation functions have been modified.
+   
+   2、Added code for error handling and memory checking.
+   
+   3、Resolved discrepancies between ASCII value sorting and pinyin sorting. Sort lower-case and upper-case single characters by ASCII value.
+   
+   4、Bug fixes and error detection using additional checkpoints to detect potential errors.
+   
+   5、Fixed compilation errors on the AIX and high versions of GCC
+   
+   6、Corrected Chineses matching errors and garbled output in UTF-8 encoding
+   
+   7、Set some inner syntax flag, to be compatible with ORACLE
+   
+   These modifications are Copyright 2017-2025 Dameng Database Co.,Ltd. 
+   Licensed under LGPL v2.1.
+   
+   ==============================================================================
+   The following files may have been modified by DAMENG.
+   ==============================================================================
+   POSIX/regcomp.c
+   POSIX/regex.c
+   POSIX/regex.h
+   POSIX/regexec.c
+   POSIX/regex_internal.c
+   POSIX/regex_internal.h
+   POSIX/re_comp.h
